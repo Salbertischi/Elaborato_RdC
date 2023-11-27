@@ -1,3 +1,4 @@
+#commento azzo
 from scapy.all import *
 import whois
 import csv
