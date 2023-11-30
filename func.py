@@ -2,6 +2,29 @@ from scapy.all import *
 import whois
 import csv
 
+class Dati:
+    def __init__(self):
+        self.chiave = ()
+        self.pacchetti = []
+        self.transportProtocol = ''
+        self.QueryDNS = []
+        self.WhoIs = []
+
+    def from1to2(self):
+        count = 0
+        for pacchetto in self.pacchetti:
+            if IP in pacchetto and pacchetto[IP].src == self.chiave[0]:
+                count += 1
+        return count
+
+    def from2to1(self):
+        count = 0
+        for pacchetto in self.pacchetti:
+            if IP in pacchetto and pacchetto[IP].src == self.chiave[1]:
+                count += 1
+        return count
+
+
 
 def get_whois_info(ip_address):
     try:
@@ -15,7 +38,7 @@ def get_whois_info(ip_address):
 def flow_tableToCSV(flow_table):
     output_csv = './out.log'
     with open(output_csv, mode='w', newline='') as csv_file:
-        fieldnames = ['src_ip', 'dst_ip', 'sport', 'dport', 'packet_count', 'Query_DNS', 'Who_Is?']
+        fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is?']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
         # Scrivi l'intestazione del file CSV
@@ -24,13 +47,16 @@ def flow_tableToCSV(flow_table):
         # Scrivi i dati dei flussi nella tabella
         for flow_key, data in flow_table.items():
             writer.writerow({
-                'src_ip': flow_key[0],
-                'dst_ip': flow_key[1],
-                'sport': flow_key[2],
-                'dport': flow_key[3],
-                'packet_count': len(data[0]),      # data[0] sarebbe packets
-                'Query_DNS' : data[1],          # Query DNS se presente
-                'Who_Is?' : data[2]
+                'IP1': flow_key[0],
+                'IP2': flow_key[1],
+                'Port1': flow_key[2],
+                'Port2': flow_key[3],
+                'Transport_Protocol': data.transportProtocol,
+                'packet_count': len(data.pacchetti),
+                'From1to2': data.from1to2(),
+                'From2to1': data.from2to1(),
+                'Query_DNS' : [q for q in data.QueryDNS],          
+                'Who_Is?' : [w for w in data.WhoIs]
             })
 
 
@@ -49,32 +75,50 @@ def analyze_traffic(pcap_file):
             sport = None
             dport = None
 
+            TranProtocol = ''
             # Gestisci il protocollo di trasporto (TCP, UDP)
             if TCP in packet:
+                TranProtocol = 'TCP'
                 sport = packet[TCP].sport
                 dport = packet[TCP].dport
             elif UDP in packet:
+                TranProtocol = 'UDP'
                 sport = packet[UDP].sport
                 dport = packet[UDP].dport
 
             # Costruisci l'identificatore del flusso
             flow_key = (src_ip, dst_ip, sport, dport)
+            alt_flow_key = (dst_ip, src_ip, dport, sport)
+            if alt_flow_key in flow_table.keys():
+                flow_key = alt_flow_key
 
             # Aggiungi il pacchetto al flusso corrispondente
             if flow_key not in flow_table:
-                flow_table[flow_key] = [[]]
+                flow_table[flow_key] = Dati()
 
-#TO DO: Finire roba dns
-            if DNS in packet and packet[DNS].haslayer(DNSQR):
-                dns_query = packet[DNS].qd.qname.decode('utf-8')
-            else:
-                dns_query = 'NoQueryDNS'
-                
-#TO DO: roba SNI
+            # Roba DNS
+            if DNS in packet and packet[DNS].qr == 1:
+                protocols = packet[IP].proto if IP in packet else packet[Ether].type
+                if packet[DNS].haslayer(DNSRR):
+                    dns_answer = packet[DNS].an.rdata
+                else:
+                    dns_answer = None
+                if packet[DNS].haslayer(DNSQR):
+                    dns_query_name = packet[DNS].qd.qname.decode('utf-8')  
+                else:
+                    dns_query_name = None
+                flow_table[flow_key].QueryDNS.append({
+                                                'Protocols': protocols,
+                                                'DNS Answer': dns_answer,
+                                                'DNS Query Name': dns_query_name
+                                                })
+            #TO DO: roba SNI
 
-            flow_table[flow_key][0].append(packet)
-            flow_table[flow_key].append(dns_query)
-            flow_table[flow_key].append(get_whois_info(dst_ip))
+            #Aggiungi i risultati alla tabella
+            flow_table[flow_key].chiave = flow_key
+            flow_table[flow_key].pacchetti.append(packet)
+            flow_table[flow_key].transportProtocol = TranProtocol
+            #flow_table[flow_key].WhoIs.append(get_whois_info(dst_ip))
     flow_tableToCSV(flow_table)
    
     # Stampa i risultati o esegui ulteriori analisi
