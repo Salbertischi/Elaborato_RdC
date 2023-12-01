@@ -1,5 +1,6 @@
 from scapy.all import *
 from scapy.layers.tls.all import *
+from scapy.layers.http import *
 import whois
 import csv
 
@@ -11,6 +12,7 @@ class Dati:
         self.QueryDNS = []
         self.WhoIs = []
         self.SNI = ''
+        self.HTTP = ''
 
     def from1to2(self):
         count = 0
@@ -40,7 +42,7 @@ def get_whois_info(ip_address):
 def flow_tableToCSV(flow_table):
     output_csv = './out.log'
     with open(output_csv, mode='w', newline='') as csv_file:
-        fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is', 'SNI']
+        fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is', 'SNI', 'HTTP']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
         # Scrivi l'intestazione del file CSV
@@ -59,7 +61,8 @@ def flow_tableToCSV(flow_table):
                 'From2to1': data.from2to1(),
                 'Query_DNS' : [q for q in data.QueryDNS],          
                 'Who_Is' : [w for w in data.WhoIs],
-                'SNI' : data.SNI
+                'SNI' : data.SNI,
+                'HTTP' : data.HTTP
             })
 
 
@@ -101,14 +104,11 @@ def analyze_traffic(pcap_file):
 
             # Roba DNS
             if DNS in packet and packet[DNS].qr == 1:
-                """ protocols = packet[IP].proto if IP in packet else hex(packet[Ether].type) Non ha molto senso perchè se è DNS è sicuramente IP quindi non entra mai nell'else """
                 protocols = packet[IP].proto
-                """ if packet[DNS].haslayer(DNSRR): """
                 if DNSRR in packet[DNS]:
                     dns_answer = packet[DNS].an.rdata
                 else:
                     dns_answer = None
-                """ if packet[DNS].haslayer(DNSQR): """
                 if DNSQR in packet[DNS]:
                     dns_query_name = packet[DNS].qd.qname.decode('utf-8')  
                 else:
@@ -120,14 +120,22 @@ def analyze_traffic(pcap_file):
                                                 })
             #TO DO: roba SNI
             
+            SNI = None
             try:
                 if TLS in packet:
                     SNI = packet[ServerName].servername.decode('utf-8')
-                    print(SNI)
-                else:
-                    SNI = None
+                    #print(SNI)
             except:
                 SNI = None
+
+            #TO DO: roba HTTP.HOST
+            HTTP = None
+            try:
+                if HTTPRequest in packet:
+                    HTTP = packet[HTTPRequest].Host.decode()
+                    #print(HTTP)
+            except:
+                HTTP = None
 
             
             #Aggiungi i risultati alla tabella
@@ -135,6 +143,7 @@ def analyze_traffic(pcap_file):
             flow_table[flow_key].pacchetti.append(packet)
             flow_table[flow_key].transportProtocol = TranProtocol
             flow_table[flow_key].SNI = SNI
+            flow_table[flow_key].HTTP = HTTP
             
             
             
