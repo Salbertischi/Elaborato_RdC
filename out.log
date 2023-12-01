@@ -1,202 +1,105 @@
-src_ip,dst_ip,sport,dport,packet_count,Query_DNS
-0.0.0.0,224.0.0.22,,,4,NoQueryDNS
-0.0.0.0,255.255.255.255,68,67,8,NoQueryDNS
-10.0.2.2,255.255.255.255,67,68,8,NoQueryDNS
-10.0.2.15,224.0.0.22,,,18,NoQueryDNS
-10.0.2.15,224.0.0.251,5353,5353,72,Android.local.
-10.0.2.15,10.0.2.3,59954,853,2,NoQueryDNS
-10.0.2.3,10.0.2.15,853,59954,2,NoQueryDNS
-10.0.2.15,10.0.2.3,61718,53,2,connectivitycheck.gstatic.com.
-10.0.2.15,10.0.2.3,31415,53,2,connectivitycheck.gstatic.com.
-10.0.2.15,10.0.2.3,45976,53,2,www.google.com.
-10.0.2.15,10.0.2.3,50421,53,2,www.google.com.
-10.0.2.15,10.0.2.3,17976,53,2,time.android.com.
-10.0.2.3,10.0.2.15,53,45976,2,www.google.com.
-10.0.2.3,10.0.2.15,53,61718,2,connectivitycheck.gstatic.com.
-10.0.2.3,10.0.2.15,53,31415,2,connectivitycheck.gstatic.com.
-10.0.2.3,10.0.2.15,53,50421,2,www.google.com.
-10.0.2.3,10.0.2.15,53,17976,2,time.android.com.
-10.0.2.15,10.0.2.3,14842,53,2,time.android.com.
-10.0.2.15,142.251.209.35,35218,80,10,NoQueryDNS
-10.0.2.15,216.58.209.36,58432,443,20,NoQueryDNS
-142.251.209.35,10.0.2.15,80,35218,10,NoQueryDNS
-216.58.209.36,10.0.2.15,443,58432,22,NoQueryDNS
-10.0.2.3,10.0.2.15,53,14842,2,time.android.com.
-10.0.2.15,216.239.35.4,41946,123,2,NoQueryDNS
-216.239.35.4,10.0.2.15,123,41946,2,NoQueryDNS
-10.0.2.15,10.0.2.3,59960,853,2,NoQueryDNS
-10.0.2.3,10.0.2.15,853,59960,2,NoQueryDNS
-10.0.2.16,224.0.0.22,,,4,NoQueryDNS
-10.0.2.15,10.0.2.3,14954,53,2,mtalk.google.com.
-10.0.2.3,10.0.2.15,53,14954,2,mtalk.google.com.
-10.0.2.15,10.0.2.3,6384,53,2,mtalk.google.com.
-10.0.2.16,10.0.2.3,52078,853,2,NoQueryDNS
-10.0.2.3,10.0.2.16,853,52078,2,NoQueryDNS
-10.0.2.3,10.0.2.15,53,6384,2,mtalk.google.com.
-10.0.2.16,10.0.2.3,17217,53,2,www.google.com.
-10.0.2.3,10.0.2.16,53,17217,2,www.google.com.
-10.0.2.15,74.125.128.188,36498,5228,18,NoQueryDNS
-10.0.2.16,216.58.209.36,50954,443,18,NoQueryDNS
-74.125.128.188,10.0.2.15,5228,36498,22,NoQueryDNS
-10.0.2.16,10.0.2.3,19691,53,2,connectivitycheck.gstatic.com.
-216.58.209.36,10.0.2.16,443,50954,18,NoQueryDNS
-10.0.2.3,10.0.2.16,53,19691,2,connectivitycheck.gstatic.com.
-10.0.2.16,142.251.209.35,44642,80,10,NoQueryDNS
-142.251.209.35,10.0.2.16,80,44642,10,NoQueryDNS
-10.0.2.16,74.125.128.188,39296,5228,22,NoQueryDNS
-10.0.2.16,10.0.2.3,52088,853,2,NoQueryDNS
-10.0.2.3,10.0.2.16,853,52088,2,NoQueryDNS
-74.125.128.188,10.0.2.16,5228,39296,22,NoQueryDNS
-10.0.2.16,10.0.2.3,16237,53,2,alt4-mtalk.google.com.
-10.0.2.16,224.0.0.251,5353,5353,42,adb-EMULATOR32X1X15X0._adb._tcp.local.
-10.0.2.3,10.0.2.16,53,16237,2,alt4-mtalk.google.com.
-10.0.2.16,173.194.202.188,46600,443,20,NoQueryDNS
-10.0.2.16,142.251.209.35,44650,80,10,NoQueryDNS
-10.0.2.16,216.58.209.36,50966,443,18,NoQueryDNS
-142.251.209.35,10.0.2.16,80,44650,10,NoQueryDNS
-216.58.209.36,10.0.2.16,443,50966,18,NoQueryDNS
-173.194.202.188,10.0.2.16,443,46600,20,NoQueryDNS
-10.0.2.16,10.0.2.3,24958,53,2,www.googleapis.com.
-10.0.2.3,10.0.2.16,53,24958,2,www.googleapis.com.
-10.0.2.16,10.0.2.3,47301,53,2,www.googleapis.com.
-10.0.2.3,10.0.2.16,53,47301,2,www.googleapis.com.
-10.0.2.16,142.250.180.170,49084,443,1260,NoQueryDNS
-142.250.180.170,10.0.2.16,443,49084,1780,NoQueryDNS
-10.0.2.16,10.0.2.3,43521,53,2,fonts.gstatic.com.
-10.0.2.3,10.0.2.16,53,43521,2,fonts.gstatic.com.
-10.0.2.16,10.0.2.3,42367,53,2,fonts.gstatic.com.
-10.0.2.3,10.0.2.16,53,42367,2,fonts.gstatic.com.
-10.0.2.16,142.251.209.3,49178,443,138,NoQueryDNS
-142.251.209.3,10.0.2.16,443,49178,178,NoQueryDNS
-10.0.2.16,10.0.2.3,23132,53,2,android.googleapis.com.
-10.0.2.3,10.0.2.16,53,23132,2,android.googleapis.com.
-10.0.2.16,10.0.2.3,49172,53,2,android.googleapis.com.
-10.0.2.16,10.0.2.3,31468,53,2,mtalk.google.com.
-10.0.2.3,10.0.2.16,53,31468,2,mtalk.google.com.
-10.0.2.16,10.0.2.3,64810,53,2,firebaseinstallations.googleapis.com.
-10.0.2.16,10.0.2.3,14836,53,2,mtalk.google.com.
-10.0.2.3,10.0.2.16,53,14836,2,mtalk.google.com.
-10.0.2.3,10.0.2.16,53,49172,2,android.googleapis.com.
-10.0.2.16,142.250.180.138,59640,443,104,NoQueryDNS
-10.0.2.16,74.125.128.188,39312,5228,22,NoQueryDNS
-142.250.180.138,10.0.2.16,443,59640,118,NoQueryDNS
-10.0.2.3,10.0.2.16,53,64810,2,firebaseinstallations.googleapis.com.
-10.0.2.16,10.0.2.3,28656,53,2,firebaseinstallations.googleapis.com.
-74.125.128.188,10.0.2.16,5228,39312,22,NoQueryDNS
-10.0.2.3,10.0.2.16,53,28656,2,firebaseinstallations.googleapis.com.
-10.0.2.16,216.58.204.138,52294,443,24,NoQueryDNS
-216.58.204.138,10.0.2.16,443,52294,22,NoQueryDNS
-10.0.2.15,74.125.128.188,36524,5228,16,NoQueryDNS
-74.125.128.188,10.0.2.15,5228,36524,22,NoQueryDNS
-10.0.2.16,10.0.2.3,37602,53,2,connectivitycheck.gstatic.com.
-10.0.2.3,10.0.2.16,53,37602,2,connectivitycheck.gstatic.com.
-10.0.2.16,10.0.2.3,35623,53,2,www.google.com.
-10.0.2.3,10.0.2.16,53,35623,2,www.google.com.
-10.0.2.16,216.58.209.36,50980,443,18,NoQueryDNS
-10.0.2.16,142.251.209.35,44668,80,10,NoQueryDNS
-216.58.209.36,10.0.2.16,443,50980,18,NoQueryDNS
-142.251.209.35,10.0.2.16,80,44668,10,NoQueryDNS
-10.0.2.16,142.250.180.170,49100,443,582,NoQueryDNS
-142.250.180.170,10.0.2.16,443,49100,638,NoQueryDNS
-10.0.2.16,142.250.180.170,49102,443,68,NoQueryDNS
-142.250.180.170,10.0.2.16,443,49102,94,NoQueryDNS
-10.0.2.16,10.0.2.3,17153,53,2,android.clients.google.com.
-10.0.2.3,10.0.2.16,53,17153,2,android.clients.google.com.
-10.0.2.16,10.0.2.3,45524,53,2,android.clients.google.com.
-10.0.2.3,10.0.2.16,53,45524,2,android.clients.google.com.
-10.0.2.16,216.58.204.142,47618,443,28,NoQueryDNS
-216.58.204.142,10.0.2.16,443,47618,28,NoQueryDNS
-10.0.2.16,142.250.180.170,49106,443,64,NoQueryDNS
-142.250.180.170,10.0.2.16,443,49106,64,NoQueryDNS
-10.0.2.16,10.0.2.3,50395,53,2,dl.google.com.
-10.0.2.3,10.0.2.16,53,50395,2,dl.google.com.
-10.0.2.16,10.0.2.3,49701,53,2,dl.google.com.
-10.0.2.3,10.0.2.16,53,49701,2,dl.google.com.
-10.0.2.16,142.250.180.142,51502,443,138,NoQueryDNS
-142.250.180.142,10.0.2.16,443,51502,222,NoQueryDNS
-10.0.2.16,142.250.180.138,59662,443,90,NoQueryDNS
-142.250.180.138,10.0.2.16,443,59662,120,NoQueryDNS
-10.0.2.16,10.0.2.3,32564,53,2,app-measurement.com.
-10.0.2.3,10.0.2.16,53,32564,2,app-measurement.com.
-10.0.2.16,10.0.2.3,28332,53,2,app-measurement.com.
-10.0.2.3,10.0.2.16,53,28332,2,app-measurement.com.
-10.0.2.16,142.250.180.142,51506,443,34,NoQueryDNS
-142.250.180.142,10.0.2.16,443,51506,32,NoQueryDNS
-10.0.2.16,74.125.128.188,39336,5228,30,NoQueryDNS
-74.125.128.188,10.0.2.16,5228,39336,30,NoQueryDNS
-10.0.2.16,10.0.2.3,20790,53,2,alt2-mtalk.google.com.
-10.0.2.3,10.0.2.16,53,20790,2,alt2-mtalk.google.com.
-10.0.2.16,10.0.2.3,22156,53,2,alt2-mtalk.google.com.
-10.0.2.3,10.0.2.16,53,22156,2,alt2-mtalk.google.com.
-10.0.2.16,74.125.200.188,39558,443,26,NoQueryDNS
-74.125.200.188,10.0.2.16,443,39558,24,NoQueryDNS
-10.0.2.16,10.0.2.3,41408,53,2,android.apis.google.com.
-10.0.2.3,10.0.2.16,53,41408,2,android.apis.google.com.
-10.0.2.16,10.0.2.3,10507,53,2,android.apis.google.com.
-10.0.2.3,10.0.2.16,53,10507,2,android.apis.google.com.
-10.0.2.16,216.58.205.46,52832,443,34,NoQueryDNS
-216.58.205.46,10.0.2.16,443,52832,32,NoQueryDNS
-10.0.2.16,142.250.180.138,59672,443,56,NoQueryDNS
-142.250.180.138,10.0.2.16,443,59672,54,NoQueryDNS
-10.0.2.16,10.0.2.3,43723,53,2,prog-money.com.
-10.0.2.3,10.0.2.16,53,43723,2,prog-money.com.
-10.0.2.16,10.0.2.3,24441,53,2,prog-money.com.
-10.0.2.3,10.0.2.16,53,24441,2,prog-money.com.
-10.0.2.16,157.90.2.159,42848,80,14,NoQueryDNS
-157.90.2.159,10.0.2.16,80,42848,12,NoQueryDNS
-10.0.2.16,10.0.2.3,2540,53,2,anmon.name.
-10.0.2.3,10.0.2.16,53,2540,2,anmon.name.
-10.0.2.16,10.0.2.3,14846,53,2,anmon.name.
-10.0.2.3,10.0.2.16,53,14846,2,anmon.name.
-10.0.2.16,142.132.131.208,60698,80,80,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60698,118,NoQueryDNS
-10.0.2.16,142.132.131.208,60700,80,18,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60700,16,NoQueryDNS
-10.0.2.16,10.0.2.3,34943,53,2,andmon.name.
-10.0.2.3,10.0.2.16,53,34943,2,andmon.name.
-10.0.2.16,10.0.2.3,51659,53,2,andmon.name.
-10.0.2.3,10.0.2.16,53,51659,2,andmon.name.
-10.0.2.16,144.76.58.8,36166,80,22,NoQueryDNS
-144.76.58.8,10.0.2.16,80,36166,20,NoQueryDNS
-10.0.2.16,142.132.131.208,60704,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60704,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60706,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60706,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60708,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60708,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60710,80,16,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60710,14,NoQueryDNS
-10.0.2.16,10.0.2.3,63559,53,2,play.googleapis.com.
-10.0.2.3,10.0.2.16,53,63559,2,play.googleapis.com.
-10.0.2.16,10.0.2.3,14431,53,2,play.googleapis.com.
-10.0.2.3,10.0.2.16,53,14431,2,play.googleapis.com.
-10.0.2.16,142.251.209.42,47256,443,36,NoQueryDNS
-142.251.209.42,10.0.2.16,443,47256,34,NoQueryDNS
-10.0.2.16,142.251.209.42,47258,443,36,NoQueryDNS
-142.251.209.42,10.0.2.16,443,47258,34,NoQueryDNS
-10.0.2.16,142.132.131.208,60716,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60716,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60718,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60718,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60720,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60720,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60722,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60722,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60724,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60724,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60726,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60726,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60728,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60728,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60730,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60730,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60732,80,16,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60732,14,NoQueryDNS
-10.0.2.16,10.0.2.3,41749,53,2,www.googleapis.com.
-10.0.2.3,10.0.2.16,53,41749,2,www.googleapis.com.
-10.0.2.16,142.250.180.170,49160,443,114,NoQueryDNS
-142.250.180.170,10.0.2.16,443,49160,150,NoQueryDNS
-10.0.2.16,142.132.131.208,60736,80,12,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60736,10,NoQueryDNS
-10.0.2.16,142.132.131.208,60738,80,10,NoQueryDNS
-142.132.131.208,10.0.2.16,80,60738,8,NoQueryDNS
+IP1,IP2,Port1,Port2,Transport_Protocol,packet_count,From1to2,From2to1,Query_DNS,Who_Is?,SNI
+0.0.0.0,224.0.0.22,,,,2,2,0,[],[],
+0.0.0.0,255.255.255.255,68,67,UDP,4,4,0,[],[],
+10.0.2.2,255.255.255.255,67,68,UDP,4,4,0,[],[],
+10.0.2.15,224.0.0.22,,,,9,9,0,[],[],
+10.0.2.15,224.0.0.251,5353,5353,UDP,36,36,0,"[{'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}]",[],
+10.0.2.15,10.0.2.3,59954,853,TCP,2,1,1,[],[],
+10.0.2.15,10.0.2.3,61718,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.251.209.35', 'DNS Query Name': 'connectivitycheck.gstatic.com.'}]",[],
+10.0.2.15,10.0.2.3,31415,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:411::2003', 'DNS Query Name': 'connectivitycheck.gstatic.com.'}]",[],
+10.0.2.15,10.0.2.3,45976,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '216.58.209.36', 'DNS Query Name': 'www.google.com.'}]",[],
+10.0.2.15,10.0.2.3,50421,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:403::2004', 'DNS Query Name': 'www.google.com.'}]",[],
+10.0.2.15,10.0.2.3,17976,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2001:4860:4806:8::', 'DNS Query Name': 'time.android.com.'}]",[],
+10.0.2.15,10.0.2.3,14842,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '216.239.35.4', 'DNS Query Name': 'time.android.com.'}]",[],
+10.0.2.15,142.251.209.35,35218,80,TCP,10,5,5,[],[],
+10.0.2.15,216.58.209.36,58432,443,TCP,21,10,11,[],[],
+10.0.2.15,216.239.35.4,41946,123,UDP,2,1,1,[],[],
+10.0.2.15,10.0.2.3,59960,853,TCP,2,1,1,[],[],
+10.0.2.16,224.0.0.22,,,,2,2,0,[],[],
+10.0.2.15,10.0.2.3,14954,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'mobile-gtalk.l.google.com.', 'DNS Query Name': 'mtalk.google.com.'}]",[],
+10.0.2.15,10.0.2.3,6384,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'mobile-gtalk.l.google.com.', 'DNS Query Name': 'mtalk.google.com.'}]",[],
+10.0.2.16,10.0.2.3,52078,853,TCP,2,1,1,[],[],
+10.0.2.16,10.0.2.3,17217,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '216.58.209.36', 'DNS Query Name': 'www.google.com.'}]",[],
+10.0.2.15,74.125.128.188,36498,5228,TCP,20,9,11,[],[],
+10.0.2.16,216.58.209.36,50954,443,TCP,18,9,9,[],[],
+10.0.2.16,10.0.2.3,19691,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.251.209.35', 'DNS Query Name': 'connectivitycheck.gstatic.com.'}]",[],
+10.0.2.16,142.251.209.35,44642,80,TCP,10,5,5,[],[],
+10.0.2.16,74.125.128.188,39296,5228,TCP,22,11,11,[],[],
+10.0.2.16,10.0.2.3,52088,853,TCP,2,1,1,[],[],
+10.0.2.16,10.0.2.3,16237,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'alt4.mobile-gtalk4.l.google.com.', 'DNS Query Name': 'alt4-mtalk.google.com.'}]",[],
+10.0.2.16,224.0.0.251,5353,5353,UDP,21,21,0,"[{'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': b'Android.local.', 'DNS Query Name': None}, {'Protocols': 17, 'DNS Answer': [b''], 'DNS Query Name': None}]",[],
+10.0.2.16,173.194.202.188,46600,443,TCP,20,10,10,[],[],
+10.0.2.16,142.251.209.35,44650,80,TCP,10,5,5,[],[],
+10.0.2.16,216.58.209.36,50966,443,TCP,18,9,9,[],[],
+10.0.2.16,10.0.2.3,24958,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:402::200a', 'DNS Query Name': 'www.googleapis.com.'}]",[],
+10.0.2.16,10.0.2.3,47301,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.250.180.170', 'DNS Query Name': 'www.googleapis.com.'}]",[],
+10.0.2.16,142.250.180.170,49084,443,TCP,1520,630,890,[],[],
+10.0.2.16,10.0.2.3,43521,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:410::2003', 'DNS Query Name': 'fonts.gstatic.com.'}]",[],
+10.0.2.16,10.0.2.3,42367,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.251.209.3', 'DNS Query Name': 'fonts.gstatic.com.'}]",[],
+10.0.2.16,142.251.209.3,49178,443,TCP,158,69,89,[],[],
+10.0.2.16,10.0.2.3,23132,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:410::200a', 'DNS Query Name': 'android.googleapis.com.'}]",[],
+10.0.2.16,10.0.2.3,49172,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.250.180.138', 'DNS Query Name': 'android.googleapis.com.'}]",[],
+10.0.2.16,10.0.2.3,31468,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'mobile-gtalk.l.google.com.', 'DNS Query Name': 'mtalk.google.com.'}]",[],
+10.0.2.16,10.0.2.3,64810,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:402::200a', 'DNS Query Name': 'firebaseinstallations.googleapis.com.'}]",[],
+10.0.2.16,10.0.2.3,14836,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'mobile-gtalk.l.google.com.', 'DNS Query Name': 'mtalk.google.com.'}]",[],
+10.0.2.16,142.250.180.138,59640,443,TCP,111,52,59,[],[],
+10.0.2.16,74.125.128.188,39312,5228,TCP,22,11,11,[],[],
+10.0.2.16,10.0.2.3,28656,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '216.58.204.138', 'DNS Query Name': 'firebaseinstallations.googleapis.com.'}]",[],
+10.0.2.16,216.58.204.138,52294,443,TCP,23,12,11,[],[],
+10.0.2.15,74.125.128.188,36524,5228,TCP,19,8,11,[],[],
+10.0.2.16,10.0.2.3,37602,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:411::2003', 'DNS Query Name': 'connectivitycheck.gstatic.com.'}]",[],
+10.0.2.16,10.0.2.3,35623,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:403::2004', 'DNS Query Name': 'www.google.com.'}]",[],
+10.0.2.16,216.58.209.36,50980,443,TCP,18,9,9,[],[],
+10.0.2.16,142.251.209.35,44668,80,TCP,10,5,5,[],[],
+10.0.2.16,142.250.180.170,49100,443,TCP,610,291,319,[],[],
+10.0.2.16,142.250.180.170,49102,443,TCP,81,34,47,[],[],
+10.0.2.16,10.0.2.3,17153,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'android.l.google.com.', 'DNS Query Name': 'android.clients.google.com.'}]",[],
+10.0.2.16,10.0.2.3,45524,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'android.l.google.com.', 'DNS Query Name': 'android.clients.google.com.'}]",[],
+10.0.2.16,216.58.204.142,47618,443,TCP,28,14,14,[],[],
+10.0.2.16,142.250.180.170,49106,443,TCP,64,32,32,[],[],
+10.0.2.16,10.0.2.3,50395,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:402::200e', 'DNS Query Name': 'dl.google.com.'}]",[],
+10.0.2.16,10.0.2.3,49701,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.250.180.142', 'DNS Query Name': 'dl.google.com.'}]",[],
+10.0.2.16,142.250.180.142,51502,443,TCP,180,69,111,[],[],
+10.0.2.16,142.250.180.138,59662,443,TCP,105,45,60,[],[],
+10.0.2.16,10.0.2.3,32564,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:402::200e', 'DNS Query Name': 'app-measurement.com.'}]",[],
+10.0.2.16,10.0.2.3,28332,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.250.180.142', 'DNS Query Name': 'app-measurement.com.'}]",[],
+10.0.2.16,142.250.180.142,51506,443,TCP,33,17,16,[],[],
+10.0.2.16,74.125.128.188,39336,5228,TCP,30,15,15,[],[],
+10.0.2.16,10.0.2.3,20790,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'alt2.mobile-gtalk4.l.google.com.', 'DNS Query Name': 'alt2-mtalk.google.com.'}]",[],
+10.0.2.16,10.0.2.3,22156,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'alt2.mobile-gtalk4.l.google.com.', 'DNS Query Name': 'alt2-mtalk.google.com.'}]",[],
+10.0.2.16,74.125.200.188,39558,443,TCP,25,13,12,[],[],
+10.0.2.16,10.0.2.3,41408,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'clients.l.google.com.', 'DNS Query Name': 'android.apis.google.com.'}]",[],
+10.0.2.16,10.0.2.3,10507,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': b'clients.l.google.com.', 'DNS Query Name': 'android.apis.google.com.'}]",[],
+10.0.2.16,216.58.205.46,52832,443,TCP,33,17,16,[],[],
+10.0.2.16,142.250.180.138,59672,443,TCP,55,28,27,[],[],
+10.0.2.16,10.0.2.3,43723,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': None, 'DNS Query Name': 'prog-money.com.'}]",[],
+10.0.2.16,10.0.2.3,24441,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '157.90.2.159', 'DNS Query Name': 'prog-money.com.'}]",[],
+10.0.2.16,157.90.2.159,42848,80,TCP,13,7,6,[],[],
+10.0.2.16,10.0.2.3,2540,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': None, 'DNS Query Name': 'anmon.name.'}]",[],
+10.0.2.16,10.0.2.3,14846,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.132.131.208', 'DNS Query Name': 'anmon.name.'}]",[],
+10.0.2.16,142.132.131.208,60698,80,TCP,99,40,59,[],[],
+10.0.2.16,142.132.131.208,60700,80,TCP,17,9,8,[],[],
+10.0.2.16,10.0.2.3,34943,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': None, 'DNS Query Name': 'andmon.name.'}]",[],
+10.0.2.16,10.0.2.3,51659,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '144.76.58.8', 'DNS Query Name': 'andmon.name.'}]",[],
+10.0.2.16,144.76.58.8,36166,80,TCP,21,11,10,[],[],
+10.0.2.16,142.132.131.208,60704,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60706,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60708,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60710,80,TCP,15,8,7,[],[],
+10.0.2.16,10.0.2.3,63559,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '2a00:1450:4002:410::200a', 'DNS Query Name': 'play.googleapis.com.'}]",[],
+10.0.2.16,10.0.2.3,14431,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.251.209.42', 'DNS Query Name': 'play.googleapis.com.'}]",[],
+10.0.2.16,142.251.209.42,47256,443,TCP,35,18,17,[],[],
+10.0.2.16,142.251.209.42,47258,443,TCP,35,18,17,[],[],
+10.0.2.16,142.132.131.208,60716,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60718,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60720,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60722,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60724,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60726,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60728,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60730,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60732,80,TCP,15,8,7,[],[],
+10.0.2.16,10.0.2.3,41749,53,UDP,2,1,1,"[{'Protocols': 17, 'DNS Answer': '142.250.180.170', 'DNS Query Name': 'www.googleapis.com.'}]",[],
+10.0.2.16,142.250.180.170,49160,443,TCP,132,57,75,[],[],
+10.0.2.16,142.132.131.208,60736,80,TCP,11,6,5,[],[],
+10.0.2.16,142.132.131.208,60738,80,TCP,9,5,4,[],[],
