@@ -2,7 +2,7 @@ from func import *
 
 
 def main():
-    analyze_traffic('../02_15_b2_00_00_00/20231109215429/traffic.pcap')
+    analyze_traffic('traffic.pcap')
 
 
 if __name__ == '__main__':
