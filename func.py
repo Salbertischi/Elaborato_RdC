@@ -10,7 +10,7 @@ class Dati:
         self.transportProtocol = ''
         self.QueryDNS = []
         self.WhoIs = []
-        #self.SNI = ''
+        self.SNI = ''
 
     def from1to2(self):
         count = 0
@@ -40,7 +40,7 @@ def get_whois_info(ip_address):
 def flow_tableToCSV(flow_table):
     output_csv = './out.log'
     with open(output_csv, mode='w', newline='') as csv_file:
-        fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is?', 'SNI']
+        fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is', 'SNI']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
         # Scrivi l'intestazione del file CSV
@@ -58,8 +58,8 @@ def flow_tableToCSV(flow_table):
                 'From1to2': data.from1to2(),
                 'From2to1': data.from2to1(),
                 'Query_DNS' : [q for q in data.QueryDNS],          
-                'Who_Is?' : [w for w in data.WhoIs],
-                #'SNI' : data.SNI
+                'Who_Is' : [w for w in data.WhoIs],
+                'SNI' : data.SNI
             })
 
 
@@ -119,16 +119,26 @@ def analyze_traffic(pcap_file):
                                                 'DNS Query Name': dns_query_name
                                                 })
             #TO DO: roba SNI
-            """             if packet.haslayer(TLS):
-                            SNI = packet[TLS_Ext_ServerName].servernames[0].servername.decode('utf-8')
-                        else:
-                            SNI = None """
+            
+            try:
+                if TLS in packet:
+                    SNI = packet[ServerName].servername.decode('utf-8')
+                    print(SNI)
+                else:
+                    SNI = None
+            except:
+                SNI = None
+
             
             #Aggiungi i risultati alla tabella
             flow_table[flow_key].chiave = flow_key
             flow_table[flow_key].pacchetti.append(packet)
             flow_table[flow_key].transportProtocol = TranProtocol
-            #flow_table[flow_key].SNI = SNI
+            flow_table[flow_key].SNI = SNI
+            
+            
+            
+            
             #flow_table[flow_key].WhoIs.append(get_whois_info(dst_ip))
     flow_tableToCSV(flow_table)
    

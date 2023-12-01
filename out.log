@@ -1,4 +1,4 @@
-IP1,IP2,Port1,Port2,Transport_Protocol,packet_count,From1to2,From2to1,Query_DNS,Who_Is?,SNI
+IP1,IP2,Port1,Port2,Transport_Protocol,packet_count,From1to2,From2to1,Query_DNS,Who_Is,SNI
 0.0.0.0,224.0.0.22,,,,2,2,0,[],[],
 0.0.0.0,255.255.255.255,68,67,UDP,4,4,0,[],[],
 10.0.2.2,255.255.255.255,67,68,UDP,4,4,0,[],[],
