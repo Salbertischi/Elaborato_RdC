@@ -40,8 +40,8 @@ def get_whois_info(ip):
         return 'Eccezione'
 
 
-def flow_tableToCSV(flow_table):
-    output_csv = './out.log'
+def flow_tableToCSV(flow_table, out_file):
+    output_csv = out_file
     with open(output_csv, mode='w', newline='') as csv_file:
         fieldnames = ['IP1', 'IP2', 'Port1', 'Port2', 'Transport_Protocol', 'packet_count', 'From1to2', 'From2to1', 'Query_DNS', 'Who_Is', 'SNI', 'HTTP']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -67,7 +67,7 @@ def flow_tableToCSV(flow_table):
             })
 
 
-def analyze_traffic(pcap_file):
+def analyze_traffic(pcap_file, out_file):
     # Leggi il file di tracce di traffico
     packets = rdpcap(pcap_file)
 
@@ -153,7 +153,7 @@ def analyze_traffic(pcap_file):
         flow_table[key].WhoIs.append(get_whois_info(key[0]))
         flow_table[key].WhoIs.append(get_whois_info(key[1]))
     
-    flow_tableToCSV(flow_table)
+    flow_tableToCSV(flow_table, out_file)
    
     # Stampa i risultati o esegui ulteriori analisi
     #for flow_key, packets in flow_table.items():
