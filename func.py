@@ -3,6 +3,7 @@ from scapy.layers.tls.all import *
 from scapy.layers.http import *
 import whois
 import csv
+from functools import lru_cache
 
 class Dati:
     def __init__(self):
@@ -11,8 +12,8 @@ class Dati:
         self.transportProtocol = ''
         self.QueryDNS = []
         self.WhoIs = []
-        self.SNI = ''
-        self.HTTP = ''
+        self.SNI = []
+        self.HTTP = []
 
     def from1to2(self):
         count = 0
@@ -29,11 +30,11 @@ class Dati:
         return count
 
 
-
-def get_whois_info(ip_address):
+@lru_cache(maxsize=None)
+def get_whois_info(ip):
     try:
         # Esegui l'interrogazione WHOIS sull'indirizzo IP
-        result = whois.whois(ip_address)
+        result = whois.whois(ip)
         return result
     except whois.parser.PywhoisError:
         return 'Eccezione'
@@ -61,8 +62,8 @@ def flow_tableToCSV(flow_table):
                 'From2to1': data.from2to1(),
                 'Query_DNS' : [q for q in data.QueryDNS],          
                 'Who_Is' : [w for w in data.WhoIs],
-                'SNI' : data.SNI,
-                'HTTP' : data.HTTP
+                'SNI' : [s for s in data.SNI],
+                'HTTP' : [h for h in data.HTTP]
             })
 
 
@@ -124,16 +125,17 @@ def analyze_traffic(pcap_file):
             try:
                 if TLS in packet:
                     SNI = packet[ServerName].servername.decode('utf-8')
-                    #print(SNI)
+                    # print(SNI)
             except:
                 SNI = None
+                pass
 
             #TO DO: roba HTTP.HOST
             HTTP = None
             try:
                 if HTTPRequest in packet:
                     HTTP = packet[HTTPRequest].Host.decode()
-                    #print(HTTP)
+                    # print(HTTP)
             except:
                 HTTP = None
 
@@ -142,13 +144,15 @@ def analyze_traffic(pcap_file):
             flow_table[flow_key].chiave = flow_key
             flow_table[flow_key].pacchetti.append(packet)
             flow_table[flow_key].transportProtocol = TranProtocol
-            flow_table[flow_key].SNI = SNI
-            flow_table[flow_key].HTTP = HTTP
-            
-            
-            
-            
-            #flow_table[flow_key].WhoIs.append(get_whois_info(dst_ip))
+            if SNI:
+                flow_table[flow_key].SNI.append(SNI) 
+            if HTTP:
+                flow_table[flow_key].HTTP.append(HTTP)
+    
+    for key, item in flow_table.items():
+        flow_table[key].WhoIs.append(get_whois_info(key[0]))
+        flow_table[key].WhoIs.append(get_whois_info(key[1]))
+    
     flow_tableToCSV(flow_table)
    
     # Stampa i risultati o esegui ulteriori analisi
