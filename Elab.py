@@ -3,6 +3,7 @@ import os
 
 
 def main():
+    # Trova le directories di tutti i file pcap e crea un file log associato
     pcaps = []
     outfiles = []
     directories = os.listdir('../02_15_b2_00_00_00')
@@ -11,32 +12,16 @@ def main():
         pcaps.append(path)
         out_file = f'./logs/{dir}.log'
         outfiles.append(out_file)
-    #print(pcaps)
-    #print(len(pcaps))
-    #print(outfiles)
-    #print(len(outfiles))
 
-
+    # Analizza le tracce pcap e metti il risultato nei file log associati
     for pcap, out in zip(pcaps, outfiles):  
         analyze_traffic(pcap, out)
 
 
 if __name__ == '__main__':
+    load_layer("tls")
+    #main()
+
+    # Analizza un singolo pcap, per debug
     pcacp_speciale = '../02_15_b2_00_00_00/20231109215429/traffic.pcap'
-    main()
-
-
-
-'''
- if DNS in packet and packet[DNS].haslayer(DNSQR):
-                dns_query = packet[DNS].qd.qname.decode('utf-8')
-                #print(f"Risoluzione DNS nel pacchetto: {dns_query}")
-            else:
-                dns_query = 'NO_Q_DNS'
-            if DNS in packet and packet[DNS].ns:
-                for ns_record in packet[DNS].ns:
-                    if ns_record.type in {1, 28}:  # 1 corrisponde a A, 28 corrisponde a AAAA
-                        dns_ip = ns_record.rdata
-                        dns_query += dns_ip   
-
-'''
+    analyze_traffic(pcacp_speciale, './outSpeciale')
