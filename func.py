@@ -4,6 +4,8 @@ from scapy.layers.http import *
 import whois
 import csv
 from functools import lru_cache
+import Dati.Dati
+
 
 class Dati:
     def __init__(self):
@@ -28,7 +30,7 @@ class Dati:
             if IP in pacchetto and pacchetto[IP].src == self.chiave[1]:
                 count += 1
         return count
-
+        
 
 @lru_cache(maxsize=None)
 def get_whois_info(ip):
@@ -125,7 +127,9 @@ def analyze_traffic(pcap_file, out_file):
             try:
                 if TLS in packet:
                     SNI = packet[ServerName].servername.decode('utf-8')
+                    #SNI = packet[TLS][TLS_Ext_ServerName].servernames[:]
                     # print(SNI)
+                    #packet[handshake].type
             except:
                 SNI = None
                 pass
@@ -159,7 +163,7 @@ def analyze_traffic(pcap_file, out_file):
     #for flow_key, packets in flow_table.items():
         #print(f"Flusso: {flow_key}, Numero di pacchetti: {len(packets)}")
 
-    # Esempio: Calcola la dimensione totale del traffico per ciascun flusso
+    # Calcola la dimensione totale del traffico per ciascun flusso
     #for flow_key, packets in flow_table.items():
         #total_size = sum(len(packet) for packet in packets)
         #print(f"Dimensione totale del traffico per il flusso {flow_key}: {total_size} byte")
