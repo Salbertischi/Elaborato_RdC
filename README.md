@@ -3,9 +3,6 @@
 ## Description
 This project includes a Python script for [describe what the script does].
 
-## Usage
-To run the script, use the following command:
-
 ## Files
 Elaborato.py: Main script.
 functions.py: Contains helper functions used in Elaborato.py.
