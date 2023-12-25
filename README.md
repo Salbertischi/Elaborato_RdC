@@ -1,7 +1,15 @@
 # Elaborato_RdC
 
 ## Description
-This project includes a Python script for [describe what the script does].
+This project includes a Python script for the analysis of a pcap file. The script is able to extract the following information:
+* IP addresses of the hosts involved in the communication
+* TCP ports used by the hosts
+* UDP ports used by the hosts
+* Number of packets sent by each host
+* DNS queries
+* HTTP requests
+* SNI (Server Name Indication) of the TLS connections
+* Whois information of the hosts
 
 ## Files
 Elaborato.py: Main script.
