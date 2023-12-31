@@ -1,0 +1,3 @@
+Query_DNS
+"[{'Protocols': 17, 'DNS Answer': ['2a00:1450:4002:416::200e'], 'DNS Query Name': 'app-measurement.com.'}]"
+"[{'Protocols': 17, 'DNS Answer': ['216.58.205.46'], 'DNS Query Name': 'app-measurement.com.'}]"

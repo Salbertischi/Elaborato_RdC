@@ -96,7 +96,7 @@ def WhoIsInfo(ip):
     try:
         result = whois.whois(ip)
         return result
-    except whois.parser.PywhoisError:
+    except Exception:
         return 'Eccezione'
 
 

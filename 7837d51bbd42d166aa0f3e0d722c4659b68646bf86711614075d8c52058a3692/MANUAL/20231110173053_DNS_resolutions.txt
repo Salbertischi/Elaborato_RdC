@@ -1,0 +1,5 @@
+Query_DNS
+"[{'Protocols': 17, 'DNS Answer': ['157.90.2.159'], 'DNS Query Name': 'prog-money.com.'}]"
+"[{'Protocols': 17, 'DNS Answer': ['142.132.131.208'], 'DNS Query Name': 'anmon.name.'}]"
+"[{'Protocols': 17, 'DNS Answer': ['144.76.58.8'], 'DNS Query Name': 'andmon.name.'}]"
+"[{'Protocols': 17, 'DNS Answer': ['142.132.131.208'], 'DNS Query Name': 'anmon.ru.'}]"
