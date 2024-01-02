@@ -1,4 +1,6 @@
 from functions import *
+from manage_output import *
+from pandas_fun import *
 import os
 import subprocess
 
@@ -15,13 +17,21 @@ def main():
     pcaps = []
     outfiles = []
     infoFiles = []
-    directories = os.listdir('../02_15_b2_00_00_00')
+    out_dirs = []
+    root_dir = r"./02_15_b2_00_00_00"
+    directories = os.listdir(root_dir)
+    
     for dir in directories:
-        path = f'../02_15_b2_00_00_00/{dir}/traffic.pcap'
+        path = os.path.join(root_dir, f'{dir}/traffic.pcap')
         pcaps.append(path)
-        out_file = f'./logs/{dir}.log'
-        outfiles.append(out_file)
-        info = f'./capsInfos/{dir}.infos'
+        
+        out_dir = get_outDir(os.path.join(root_dir, dir))
+        out_dirs.append(out_dir)
+        
+        out_file = os.path.join(out_dir, f'{dir}.log.txt')
+        outfiles.append(out_file)        
+
+        info = os.path.join(out_dir, f'{dir}.infos.txt')
         infoFiles.append(info)
 
     # Analizza le tracce pcap e metti il risultato nei file log associati
@@ -35,13 +45,20 @@ def main():
     for pcap, out in zip(pcaps, infoFiles):
         print(f"CapInfos {i}")
         addCapsInfos(pcap, out)
+        i += 1 
+        
+    i = 1
+    for outLog, outDir in zip(outfiles, out_dirs):
+        dns_summary(outLog, outDir)
+        ip_traffic_summary(outLog, outDir)
+        sni_summary(outLog, outDir)
         i += 1
-
+ 
 
 
 if __name__ == '__main__':
     main()
 
     # Analizza un singolo pcap, per debug
-    pcacp_speciale = '../02_15_b2_00_00_00/20231109215429/traffic.pcap'
-    analizzaPCAP(pcacp_speciale, './out')
+    #pcacp_speciale = '../02_15_b2_00_00_00/20231109215429/traffic.pcap'
+    #analizzaPCAP(pcacp_speciale, './out')

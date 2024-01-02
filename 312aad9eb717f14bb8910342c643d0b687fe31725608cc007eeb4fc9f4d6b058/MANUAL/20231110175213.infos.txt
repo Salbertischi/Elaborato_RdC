@@ -1,0 +1,27 @@
+File name:           ./02_15_b2_00_00_00/20231110175213/traffic.pcap
+File type:           Wireshark/tcpdump/... - pcap
+File encapsulation:  Ethernet
+File timestamp precision:  microseconds (6)
+Packet size limit:   file hdr: 65536 bytes
+Number of packets:   3585
+File size:           2400 kB
+Data size:           2342 kB
+Capture duration:    224.208129 seconds
+First packet time:   2023-11-10 16:52:26.101336
+Last packet time:    2023-11-10 16:56:10.309465
+Data byte rate:      10 kBps
+Data bit rate:       83 kbps
+Average packet size: 653.48 bytes
+Average packet rate: 15 packets/s
+SHA256:              83778b761563f13151014e4e8f3063df7631bccd7d016da3982ec0aad2a3db7d
+RIPEMD160:           8120585daa8c4583145140d06726fe18b343995f
+SHA1:                fd95e7a2787463fed5bd6c6f5aa112306220733e
+Strict time order:   True
+Number of interfaces in file: 1
+Interface #0 info:
+                     Encapsulation = Ethernet (1 - ether)
+                     Capture length = 65536
+                     Time precision = microseconds (6)
+                     Time ticks per second = 1000000
+                     Number of stat entries = 0
+                     Number of packets = 3585
